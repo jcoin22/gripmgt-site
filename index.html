@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-...
-<!-- Facebook Pixel Code -->
-<script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '3967326260201283');
-  fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=3967326260201283&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-</head>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Grip Management LLC</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
+
+  <!-- Facebook Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '3967326260201283');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=3967326260201283&ev=PageView&noscript=1"/>
+  </noscript>
+  <!-- End Facebook Pixel Code -->
 </head>
 <body>
   <main class="container">
@@ -39,6 +39,7 @@ src="https://www.facebook.com/tr?id=3967326260201283&ev=PageView&noscript=1"
         <li>📍 Bradenton, FL · Serving Sarasota & Trackside Events</li>
       </ul>
     </section>
+
     <section>
       <h2>Contact Us</h2>
       <form id="contact-form">
@@ -73,7 +74,7 @@ src="https://www.facebook.com/tr?id=3967326260201283&ev=PageView&noscript=1"
 
       <script>
         document.getElementById('contact-form').addEventListener('submit', async function (e) {
-          e.preventDefault(); // Prevent normal form submission
+          e.preventDefault();
 
           const form = e.target;
           const data = new FormData(form);
@@ -95,9 +96,6 @@ src="https://www.facebook.com/tr?id=3967326260201283&ev=PageView&noscript=1"
         });
       </script>
     </section>
-
-    <section>
-      <h2>Services</h2>
-      <ul>
-        <li>Trackside coaching and car setup</li>
-        <li>Mobile diagnostics and repair (brakes, suspension, drivability)
+  </main>
+</body>
+</html>
