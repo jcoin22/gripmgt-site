@@ -1,26 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- === BASIC META === -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Soft Wash & Pressure Washing Lakewood Ranch, Bradenton, Sarasota | Grip Management</title>
+  <title>Soft Wash & Pressure Washing Lakewood Ranch | Grip Management</title>
   <meta name="description" content="Professional soft wash & pressure washing in Lakewood Ranch, Bradenton, Sarasota. Roof cleaning, house washing, driveways. Safe, eco-friendly, locally owned. Free estimate!" />
   <link rel="canonical" href="https://gripmgmt.com/" />
   <meta name="robots" content="index, follow" />
   <meta name="author" content="Grip Management" />
   <meta name="theme-color" content="#0066cc" />
 
-  <!-- === GEO / LOCAL SEO === -->
+  <!-- GEO / LOCAL SEO -->
   <meta name="geo.region" content="US-FL" />
   <meta name="geo.placename" content="Lakewood Ranch" />
   <meta name="geo.position" content="27.3956;-82.4351" />
   <meta name="ICBM" content="27.3956, -82.4351" />
 
-  <!-- === FAVICON === -->
+  <!-- FAVICON -->
   <link rel="icon" type="image/png" href="favicon.png" />
 
-  <!-- === STRUCTURED DATA (LocalBusiness Schema) === -->
+  <!-- STRUCTURED DATA -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -36,126 +35,182 @@
       "addressRegion": "FL",
       "addressCountry": "US"
     },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 27.3956,
-      "longitude": -82.4351
-    },
+    "geo": { "@type": "GeoCoordinates", "latitude": 27.3956, "longitude": -82.4351 },
     "openingHours": "Mo-Fr 08:00-17:00",
-    "priceRange": "$$",
-    "description": "Professional soft wash and pressure washing services in Lakewood Ranch, Bradenton, and Sarasota. Safe, eco-friendly exterior cleaning for roofs, homes, and driveways.",
-    "service": [
-      { "@type": "Service", "name": "Roof Cleaning" },
-      { "@type": "Service", "name": "House Washing" },
-      { "@type": "Service", "name": "Driveway Cleaning" },
-      { "@type": "Service", "name": "Gutter Cleaning" }
-    ]
+    "priceRange": "$$"
   }
   </script>
 
-  <!-- === PICO CSS === -->
+  <!-- PICO CSS + CUSTOM STYLES -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
-
   <style>
-    body {
-      line-height: 1.6;
-      font-family: system-ui, sans-serif;
-      background-color: #f8faff;
-      color: #333;
-      padding-bottom: 4rem;
+    :root {
+      --primary: #0066cc;
+      --primary-dark: #004a99;
+      --accent: #00d1ff;
+      --bg: #f0f7ff;
+      --text: #1a1a1a;
     }
 
-    main.container {
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      line-height: 1.7;
+      padding-bottom: 5rem;
+    }
+
+    .container {
       max-width: 1100px;
       margin: auto;
-      padding: 1rem 2rem;
+      padding: 2rem 1.5rem;
     }
 
     h1, h2 {
-      color: #0066cc;
-      font-weight: 700;
-      text-shadow: 0 1px 2px rgba(0,0,0,0.05);
+      color: var(--primary);
+      font-weight: 800;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
 
-    h1 { font-size: 2.5rem; text-align: center; margin: 2rem 0 0.5rem; }
-    header p { text-align: center; font-size: 1.2rem; color: #555; margin-bottom: 3rem; }
+    h1 {
+      font-size: 2.8rem;
+      text-align: center;
+      margin: 2rem 0 0.8rem;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
 
-    ul { list-style-type: square; margin: 1rem 0 2rem 1.5rem; font-size: 1.1rem; }
+    header p {
+      text-align: center;
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 3rem;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 1.5rem 0;
+    }
+
+    ul li {
+      background: white;
+      margin: 0.6rem 0;
+      padding: 1rem 1.2rem;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+      font-size: 1.1rem;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      transition: transform 0.2s;
+    }
+
+    ul li:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+    }
+
+    ul li::before {
+      content: "✓";
+      color: var(--primary);
+      font-weight: bold;
+      margin-right: 0.8rem;
+      font-size: 1.3rem;
+    }
 
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 1.5rem;
-      margin: 2rem 0;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.8rem;
+      margin: 2.5rem 0;
     }
 
     .gallery img {
       width: 100%;
       height: auto;
-      border-radius: 12px;
-      border: 1px solid #e0e0e0;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 16px;
+      border: 3px solid white;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+      transition: all 0.4s ease;
     }
 
     .gallery img:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      transform: scale(1.05) translateY(-8px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+      border-color: var(--accent);
     }
 
     figcaption {
-      font-size: 1rem;
-      margin-top: 0.5rem;
-      color: #666;
       text-align: center;
-      font-style: italic;
+      margin-top: 0.8rem;
+      font-weight: 600;
+      color: #0066cc;
+      font-size: 1.05rem;
     }
 
-    .equipment { text-align: center; margin: 3rem 0; }
-    .equipment img { max-width: 80%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
-
-    @media (max-width: 768px) {
-      h1 { font-size: 2rem; }
-      h2 { font-size: 1.5rem; }
-      .gallery { grid-template-columns: 1fr; gap: 2rem; }
-      main.container { padding: 1rem; }
+    .equipment {
+      text-align: center;
+      margin: 4rem 0;
+      background: white;
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
     }
 
-    /* Scroll to top button */
-    #topBtn {
-      display: none;
-      position: fixed;
-      bottom: 80px;
-      right: 20px;
-      z-index: 99;
-      background-color: #0066cc;
+    .equipment img {
+      max-width: 90%;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    }
+
+    /* FORM */
+    form {
+      background: white;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      margin-top: 2rem;
+    }
+
+    button {
+      background: linear-gradient(135deg, var(--primary), var(--accent));
       color: white;
+      font-weight: 700;
+      padding: 1rem 2rem;
       border: none;
-      border-radius: 50%;
-      padding: 0.8rem 1rem;
-      font-size: 1.2rem;
+      border-radius: 50px;
+      font-size: 1.1rem;
       cursor: pointer;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-      transition: background 0.3s;
+      transition: all 0.3s;
+      width: 100%;
     }
-    #topBtn:hover { background-color: #004a99; }
 
-    /* Sticky Text CTA Button */
-    .cta-btn {
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0,102,204,0.3);
+    }
+
+    /* TEXT MESSAGE CTA (Mobile Only) */
+    .sms-cta {
       display: none;
       position: fixed;
       bottom: 0;
       left: 0;
       width: 100%;
-      background-color: #0066cc;
-      color: #fff;
+      background: linear-gradient(135deg, #0066cc, #00d1ff);
+      color: white;
       text-align: center;
-      padding: 1rem;
-      font-size: 1.2rem;
-      font-weight: 600;
+      padding: 1.2rem;
+      font-size: 1.3rem;
+      font-weight: 700;
       text-decoration: none;
-      box-shadow: 0 -2px 10px rgba(0,0,0,0.15);
-      animation: pulse 1.5s infinite;
+      box-shadow: 0 -4px 20px rgba(0,0,0,0.2);
+      z-index: 1000;
+      animation: pulse 2s infinite;
     }
 
     @keyframes pulse {
@@ -164,15 +219,40 @@
     }
 
     @media (max-width: 768px) {
-      .cta-btn { display: block; }
+      .sms-cta { display: block; }
     }
+
+    /* SCROLL TO TOP */
+    #topBtn {
+      display: none;
+      position: fixed;
+      bottom: 80px;
+      right: 20px;
+      background: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 55px;
+      height: 55px;
+      font-size: 1.5rem;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      z-index: 99;
+    }
+
+    #topBtn:hover { background: var(--primary-dark); }
   </style>
 </head>
 <body>
-  <main class="container">
+  <!-- TEXT MESSAGE CTA (Mobile) -->
+  <a href="sms:+19414048452?body=Hello%2C%20I%20am%20interested%20in%20your%20amazing%20services%21" class="sms-cta">
+    Text Us Now
+  </a>
+
+  <div class="container">
     <header>
       <h1>Soft Wash & Pressure Washing in Lakewood Ranch</h1>
-      <p>Serving Lakewood Ranch, Bradenton, Sarasota & Surrounding Areas</p>
+      <p><strong>Serving Lakewood Ranch, Bradenton, Sarasota & Beyond</strong></p>
     </header>
 
     <section>
@@ -190,14 +270,14 @@
 
     <section>
       <h2>Why Choose Grip Management?</h2>
-      <p>We use low-pressure soft washing to gently remove dirt, algae, and mildew — no damage to shingles, paint, or landscaping.</p>
-      <p>Locally owned, fully insured, and obsessed with results. Every job includes a satisfaction guarantee.</p>
+      <p>We use <strong>low-pressure soft washing</strong> to remove dirt, algae, and mildew — <strong>no damage</strong> to shingles, paint, or landscaping.</p>
+      <p>Locally owned, fully insured, and obsessed with results. Every job includes a <strong>satisfaction guarantee</strong>.</p>
     </section>
 
     <section class="equipment">
       <h2>Professional Equipment</h2>
       <p>Our custom soft wash trailer delivers precise, eco-friendly cleaning for superior results.</p>
-      <img src="IMG_2758.jpeg" alt="Grip Management soft wash trailer in action" loading="lazy">
+      <img src="IMG_2758.jpeg" alt="Grip Management soft wash trailer" loading="lazy">
     </section>
 
     <section>
@@ -205,16 +285,20 @@
       <p>See how soft washing transforms homes across Lakewood Ranch, Bradenton, and Sarasota.</p>
       <div class="gallery">
         <figure>
-          <img src="IMG_2687.JPG" alt="Before: Algae-covered roof in Lakewood Ranch" loading="lazy">
-          <figcaption>Before & After #1: Deep clean without high pressure — color restored and algae removed.</figcaption>
+          <img src="IMG_2687.JPG" alt="Before: Algae-covered roof" loading="lazy">
+          <figcaption>Before → Deep algae growth</figcaption>
         </figure>
         <figure>
-          <img src="IMG_2871.JPG" alt="After: Clean roof in Lakewood Ranch" loading="lazy">
-          <figcaption>Before & After #2: Protects surfaces while brightening and refreshing your home.</figcaption>
+          <img src="IMG_2758.jpeg" alt="After: Clean roof" loading="lazy">
+          <figcaption>After → Like new, no damage</figcaption>
         </figure>
         <figure>
-          <img src="IMG_2999.JPG" alt="Before and after driveway cleaning in Sarasota" loading="lazy">
-          <figcaption>Before & After #3: Spotless and streak-free results that last.</figcaption>
+          <img src="IMG_2871.JPG" alt="Before: Dirty driveway" loading="lazy">
+          <figcaption>Before → Stains and grime</figcaption>
+        </figure>
+        <figure>
+          <img src="IMG_2999.JPG" alt="After: Spotless driveway" loading="lazy">
+          <figcaption>After → Clean, safe, inviting</figcaption>
         </figure>
       </div>
     </section>
@@ -222,9 +306,9 @@
     <section>
       <h2>Contact Us</h2>
       <ul>
-        <li>Phone: <a href="tel:+19414048452">(941) 404-8452</a></li>
-        <li>Email: <a href="mailto:john@gripmgmt.com">john@gripmgmt.com</a></li>
-        <li>Location: Lakewood Ranch, FL — Serving Bradenton, Sarasota & Manatee County</li>
+        <li>📞 <a href="tel:+19414048452">(941) 404-8452</a></li>
+        <li>✉️ <a href="mailto:john@gripmgmt.com">john@gripmgmt.com</a></li>
+        <li>📍 Lakewood Ranch, FL — Serving Bradenton, Sarasota & Manatee County</li>
       </ul>
     </section>
 
@@ -232,65 +316,55 @@
       <h2>Get a Free Estimate</h2>
       <form id="contact-form" action="https://formspree.io/f/mrbqpzyj" method="POST">
         <div class="grid">
-          <label for="name">
-            Name <span style="color:red">*</span>
+          <label for="name">Name <span style="color:red">*</span>
             <input type="text" id="name" name="name" required>
           </label>
-          <label for="email">
-            Email <span style="color:red">*</span>
+          <label for="email">Email <span style="color:red">*</span>
             <input type="email" id="email" name="_replyto" required>
           </label>
         </div>
-        <label for="phone">
-          Phone Number
-          <input type="tel" id="phone" name="phone" placeholder="Optional">
+        <label for="phone">Phone (optional)
+          <input type="tel" id="phone" name="phone">
         </label>
-        <label for="message">
-          Message <span style="color:red">*</span>
+        <label for="message">Message <span style="color:red">*</span>
           <textarea id="message" name="message" rows="5" required></textarea>
         </label>
-        <button type="submit">Request Estimate</button>
+        <button type="submit">Send Request</button>
         <p id="success-message" style="display:none; color:green; margin-top:1rem;">
-          Thank you! Your message has been sent.
+          Thank you! We’ll reply within 24 hours.
         </p>
       </form>
     </section>
-  </main>
+  </div>
 
-  <!-- Sticky Text CTA Button -->
-  <a href="#estimate" class="cta-btn">Get Free Estimate</a>
-
-  <!-- Scroll to Top Button -->
-  <button id="topBtn" onclick="scrollToTop()" aria-label="Scroll to top">Up</button>
+  <!-- Scroll to Top -->
+  <button id="topBtn" onclick="scrollToTop()">Up</button>
 
   <script>
-    // Form Submission
-    document.getElementById('contact-form').addEventListener('submit', async function (e) {
-      e.preventDefault();
-      const form = e.target;
-      const data = new FormData(form);
-      const response = await fetch(form.action, {
-        method: "POST",
-        body: data,
-        headers: {'Accept': 'application/json'}
-      });
-      if (response.ok) {
-        form.reset();
-        document.getElementById('success-message').style.display = 'block';
-      } else {
-        alert("Oops! There was a problem submitting your form.");
-      }
-    });
-
-    // Scroll to Top
     function scrollToTop() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
-
-    // Show/Hide Scroll Button
     window.addEventListener('scroll', () => {
-      const btn = document.getElementById('topBtn');
-      btn.style.display = (window.scrollY > 300) ? 'block' : 'none';
+      document.getElementById('topBtn').style.display = 
+        (window.scrollY > 300) ? 'block' : 'none';
+    });
+
+    // Form
+    document.getElementById('contact-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const form = e.target;
+      const data = new FormData(form);
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        form.reset();
+        document.getElementById('success-message').style.display = 'block';
+      } else {
+        alert('Try again or text us!');
+      }
     });
   </script>
 </body>
