@@ -54,7 +54,7 @@
       --form-text: #0d0d0d;
       --input-bg: #ffffff;
       --input-border: #ccc;
-      --text-readable: #444;
+      --text-readable: #222; /* ← FIXED: Darker gray for better contrast */
     }
 
     body {
@@ -66,8 +66,8 @@
     }
 
     @media (max-width: 768px) {
-      body {
-        color: #0d0d0d !important; /* Explicit darker font for mobile */
+      body, p, li, label, .caption {
+        color: #0d0d0d !important; /* ← FIXED: Forces darker font on mobile */
       }
     }
 
@@ -314,15 +314,15 @@
       <div class="before-after">
         <div class="pair">
           <img src="IMG_2687.JPG" alt="Before & After – Roof cleaning" loading="lazy">
-          <div class="caption">Before → Heavy algae growth | After → Heavy buildup removal</div>
+          <div class="caption">Before → Deep algae growth | After → Like new, no damage</div>
         </div>
         <div class="pair">
           <img src="IMG_2871.JPG" alt="Before & After – Driveway cleaning" loading="lazy">
-          <div class="caption">Before → Stains & grime | After → Spotless & safe</div>
+          <div class="caption">Before → Stains & grime | After → Spotless & safe</div>
         </div>
         <div class="pair">
           <img src="IMG_2999.JPG" alt="Before & After – Additional cleaning" loading="lazy">
-          <div class="caption">Before → Heavy buildup | After → Bright & inviting</div>
+          <div class="caption">Before → Heavy buildup | After → Bright & inviting</div>
         </div>
       </div>
     </section>
