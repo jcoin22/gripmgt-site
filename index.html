@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Soft Wash & Pressure Washing Lakewood Ranch | Grip Management</title>
-  <meta name="description" content="Professional soft wash & pressure washing in Lakewood Ranch, Bradenton, Sarasota. Roof cleaning, house washing, driveways. Safe, eco‑friendly, locally owned. Free estimate!" />
+  <meta name="description" content="Professional soft wash & pressure washing in Lakewood Ranch, Bradenton, Sarasota. Roof cleaning, house washing, driveways. Safe, eco-friendly, locally owned. Free estimate!" />
   <link rel="canonical" href="https://gripmgmt.com/" />
   <meta name="robots" content="index, follow" />
   <meta name="author" content="Grip Management" />
@@ -49,7 +49,11 @@
       --primary-dark: #004a99;
       --accent: #00d1ff;
       --bg: #f0f7ff;
-      --text: #1a1a1a;
+      --text: #0d0d0d; /* ← NEW: Halfway between #1a1a1a and #000000 */
+      --form-bg: #000000;
+      --form-text: #ffffff;
+      --input-bg: #ffffff;
+      --input-border: #333;
     }
 
     body {
@@ -102,7 +106,7 @@
     ul li:hover { transform: translateY(-3px); box-shadow: 0 6px 16px rgba(0,0,0,0.12); }
     ul li::before { content: "✓"; color: var(--primary); font-weight: bold; margin-right: .8rem; font-size: 1.3rem; }
 
-    /* ---------- BEFORE / AFTER GRID ---------- */
+    /* BEFORE / AFTER GRID */
     .before-after {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -131,10 +135,11 @@
     .pair .caption {
       margin-top: .8rem;
       font-weight: 600;
-      color: var(--primary);
+      color: var(--text); /* ← Now same as body text */
+      font-size: 1.05rem;
     }
 
-    /* ---------- EQUIPMENT ---------- */
+    /* EQUIPMENT */
     .equipment {
       text-align: center;
       margin: 4rem 0;
@@ -144,22 +149,54 @@
       box-shadow: 0 6px 20px rgba(0,0,0,0.1);
     }
 
+    .equipment p {
+      color: var(--text); /* ← Unified */
+    }
+
     .equipment img {
       max-width: 85%;
       border-radius: 16px;
       box-shadow: 0 8px 24px rgba(0,0,0,0.15);
     }
 
-    /* ---------- FORM ---------- */
+    /* FORM – BLACK BACKGROUND, WHITE TEXT */
     form {
-      background: white;
-      padding: 2rem;
+      background: var(--form-bg);
+      color: var(--form-text);
+      padding: 2.5rem;
       border-radius: 16px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      border: 1px solid #fff;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.3);
       margin-top: 2rem;
     }
 
-    button {
+    form label {
+      color: var(--form-text);
+      font-weight: 600;
+      margin-bottom: .5rem;
+      display: block;
+    }
+
+    form input,
+    form textarea {
+      background: var(--input-bg);
+      color: var(--text);
+      border: 1px solid var(--input-border);
+      padding: .9rem;
+      border-radius: 8px;
+      font-size: 1rem;
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+
+    form input:focus,
+    form textarea:focus {
+      border-color: var(--primary);
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(0,102,204,0.2);
+    }
+
+    form button {
       background: linear-gradient(135deg, var(--primary), var(--accent));
       color: white;
       font-weight: 700;
@@ -172,12 +209,12 @@
       width: 100%;
     }
 
-    button:hover {
+    form button:hover {
       transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(0,102,204,.3);
+      box-shadow: 0 8px 20px rgba(0,102,204,.4);
     }
 
-    /* ---------- TEXT MESSAGE CTA (mobile) ---------- */
+    /* TEXT MESSAGE CTA (mobile) */
     .sms-cta {
       display: none;
       position: fixed;
@@ -202,7 +239,7 @@
 
     @media (max-width:768px){.sms-cta{display:block}}
 
-    /* ---------- SCROLL TO TOP ---------- */
+    /* SCROLL TO TOP – CENTERED */
     #topBtn{
       display:none;
       position:fixed;
@@ -213,10 +250,16 @@
       color:white;
       border:none;
       border-radius:50%;
-      width:55px;height:55px;
-      font-size:1.5rem;
+      width:60px;
+      height:60px;
+      font-size:1.8rem;
+      font-weight:bold;
       cursor:pointer;
       box-shadow:0 4px 12px rgba(0,0,0,.2);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      transition:background .3s;
     }
     #topBtn:hover{background:var(--primary-dark)}
   </style>
@@ -249,38 +292,33 @@
 
     <section>
       <h2>Why Choose Grip Management?</h2>
-      <p>We use <strong>low‑pressure soft washing</strong> to remove dirt, algae, and mildew — <strong>no damage</strong> to shingles, paint, or landscaping.</p>
+      <p>We use <strong>low-pressure soft washing</strong> to remove dirt, algae, and mildew — <strong>no damage</strong> to shingles, paint, or landscaping.</p>
       <p>Locally owned, fully insured, and obsessed with results. Every job includes a <strong>satisfaction guarantee</strong>.</p>
     </section>
 
-    <!-- ---------- PROFESSIONAL EQUIPMENT ---------- -->
+    <!-- PROFESSIONAL EQUIPMENT -->
     <section class="equipment">
       <h2>Professional Equipment</h2>
-      <p>Our custom soft‑wash trailer is built for precision, safety, and eco‑friendly results.</p>
-      <img src="IMG_2758.jpeg" alt="Grip Management custom soft‑wash trailer" loading="lazy">
+      <p>Our custom soft-wash trailer is built for precision, safety, and eco-friendly results.</p>
+      <img src="IMG_2758.jpeg" alt="Grip Management custom soft-wash trailer" loading="lazy">
     </section>
 
-    <!-- ---------- BEFORE / AFTER ---------- -->
+    <!-- BEFORE / AFTER -->
     <section>
       <h2>Before &amp; After Results</h2>
       <p>See how soft washing transforms homes across Lakewood Ranch, Bradenton, and Sarasota.</p>
 
       <div class="before-after">
-        <!-- Pair 1 -->
         <div class="pair">
-          <img src="IMG_2687.JPG" alt="Before & After – Roof cleaning (combined image)" loading="lazy">
+          <img src="IMG_2687.JPG" alt="Before & After – Roof cleaning" loading="lazy">
           <div class="caption">Before → Deep algae growth | After → Like new, no damage</div>
         </div>
-
-        <!-- Pair 2 -->
         <div class="pair">
-          <img src="IMG_2871.JPG" alt="Before & After – Driveway cleaning (combined image)" loading="lazy">
+          <img src="IMG_2871.JPG" alt="Before & After – Driveway cleaning" loading="lazy">
           <div class="caption">Before → Stains & grime | After → Spotless & safe</div>
         </div>
-
-        <!-- Pair 3 (optional – add more if you have them) -->
         <div class="pair">
-          <img src="IMG_2999.JPG" alt="Before & After – Additional cleaning (combined image)" loading="lazy">
+          <img src="IMG_2999.JPG" alt="Before & After – Additional cleaning" loading="lazy">
           <div class="caption">Before → Heavy buildup | After → Bright & inviting</div>
         </div>
       </div>
@@ -289,7 +327,7 @@
     <section>
       <h2>Contact Us</h2>
       <ul>
-        <li>Phone: <a href="tel:+19414048452">(941) 404‑8452</a></li>
+        <li>Phone: <a href="tel:+19414048452">(941) 404-8452</a></li>
         <li>Email: <a href="mailto:john@gripmgmt.com">john@gripmgmt.com</a></li>
         <li>Location: Lakewood Ranch, FL — Serving Bradenton, Sarasota &amp; Manatee County</li>
       </ul>
@@ -313,19 +351,19 @@
           <textarea id="message" name="message" rows="5" required></textarea>
         </label>
         <button type="submit">Send Request</button>
-        <p id="success-message" style="display:none;color:green;margin-top:1rem;">
+        <p id="success-message" style="display:none;color:#00ff00;margin-top:1rem;">
           Thank you! We’ll reply within 24 hours.
         </p>
       </form>
     </section>
   </div>
 
-  <!-- SCROLL TO TOP -->
+  <!-- SCROLL TO TOP – CENTERED -->
   <button id="topBtn" onclick="scrollToTop()">Up</button>
 
   <script>
     function scrollToTop(){window.scrollTo({top:0,behavior:'smooth'});}
-    window.addEventListener('scroll',()=>{document.getElementById('topBtn').style.display=(window.scrollY>300)?'block':'none';});
+    window.addEventListener('scroll',()=>{document.getElementById('topBtn').style.display=(window.scrollY>300)?'flex':'none';});
 
     // Form
     document.getElementById('contact-form').addEventListener('submit',async e=>{
