@@ -49,11 +49,12 @@
       --primary-dark: #004a99;
       --accent: #00d1ff;
       --bg: #f0f7ff;
-      --text: #0d0d0d; /* ← NEW: Halfway between #1a1a1a and #000000 */
+      --text: #0d0d0d;
       --form-bg: #000000;
       --form-text: #ffffff;
       --input-bg: #ffffff;
       --input-border: #333;
+      --text-readable: #444; /* Darker, readable gray */
     }
 
     body {
@@ -135,7 +136,7 @@
     .pair .caption {
       margin-top: .8rem;
       font-weight: 600;
-      color: var(--text); /* ← Now same as body text */
+      color: var(--text-readable);
       font-size: 1.05rem;
     }
 
@@ -150,7 +151,7 @@
     }
 
     .equipment p {
-      color: var(--text); /* ← Unified */
+      color: var(--text-readable);
     }
 
     .equipment img {
