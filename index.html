@@ -50,8 +50,8 @@
       --accent: #00d1ff;
       --bg: #f0f7ff;
       --text: #0d0d0d;
-      --form-bg: #000000;
-      --form-text: #ffffff;
+      --form-bg: #ffffff; /* ← FIXED: White background to match page theme */
+      --form-text: #0d0d0d; /* Dark text */
       --input-bg: #ffffff;
       --input-border: #333;
       --text-readable: #444; /* Darker, readable gray */
@@ -150,23 +150,19 @@
       box-shadow: 0 6px 20px rgba(0,0,0,0.1);
     }
 
-    .equipment p {
-      color: var(--text-readable);
-    }
-
     .equipment img {
       max-width: 85%;
       border-radius: 16px;
       box-shadow: 0 8px 24px rgba(0,0,0,0.15);
     }
 
-    /* FORM – BLACK BACKGROUND, WHITE TEXT */
+    /* FORM – FIXED: White background, congruent theme */
     form {
       background: var(--form-bg);
       color: var(--form-text);
       padding: 2.5rem;
       border-radius: 16px;
-      border: 1px solid #fff;
+      border: 1px solid var(--primary); /* Thin blue outline to match theme */
       box-shadow: 0 8px 30px rgba(0,0,0,0.3);
       margin-top: 2rem;
     }
