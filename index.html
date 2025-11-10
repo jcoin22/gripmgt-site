@@ -50,11 +50,11 @@
       --accent: #00d1ff;
       --bg: #f0f7ff;
       --text: #0d0d0d;
-      --form-bg: #ffffff; /* ← FIXED: White background to match page theme */
-      --form-text: #0d0d0d; /* Dark text */
+      --form-bg: #f0f7ff;
+      --form-text: #0d0d0d;
       --input-bg: #ffffff;
-      --input-border: #333;
-      --text-readable: #444; /* Darker, readable gray */
+      --input-border: #ccc;
+      --text-readable: #444;
     }
 
     body {
@@ -63,6 +63,12 @@
       font-family: 'Segoe UI', system-ui, sans-serif;
       line-height: 1.7;
       padding-bottom: 5rem;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        color: #0d0d0d !important; /* Explicit darker font for mobile */
+      }
     }
 
     .container { max-width: 1100px; margin: auto; padding: 2rem 1.5rem; }
@@ -156,14 +162,14 @@
       box-shadow: 0 8px 24px rgba(0,0,0,0.15);
     }
 
-    /* FORM – FIXED: White background, congruent theme */
+    /* FORM – FIXED: Matches page theme */
     form {
       background: var(--form-bg);
       color: var(--form-text);
       padding: 2.5rem;
       border-radius: 16px;
-      border: 1px solid var(--primary); /* Thin blue outline to match theme */
-      box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+      border: 1px solid #e0e0e0; /* Thin light outline */
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
       margin-top: 2rem;
     }
 
@@ -176,9 +182,9 @@
 
     form input,
     form textarea {
-      background: var(--input-bg);
+      background: #ffffff;
       color: var(--text);
-      border: 1px solid var(--input-border);
+      border: 1px solid #ccc;
       padding: .9rem;
       border-radius: 8px;
       font-size: 1rem;
@@ -308,15 +314,15 @@
       <div class="before-after">
         <div class="pair">
           <img src="IMG_2687.JPG" alt="Before & After – Roof cleaning" loading="lazy">
-          <div class="caption">Before → Deep algae growth | After → Like new, no damage</div>
+          <div class="caption">Before → Heavy algae growth | After → Heavy buildup removal</div>
         </div>
         <div class="pair">
           <img src="IMG_2871.JPG" alt="Before & After – Driveway cleaning" loading="lazy">
-          <div class="caption">Before → Stains & grime | After → Spotless & safe</div>
+          <div class="caption">Before → Stains & grime | After → Spotless & safe</div>
         </div>
         <div class="pair">
           <img src="IMG_2999.JPG" alt="Before & After – Additional cleaning" loading="lazy">
-          <div class="caption">Before → Heavy buildup | After → Bright & inviting</div>
+          <div class="caption">Before → Heavy buildup | After → Bright & inviting</div>
         </div>
       </div>
     </section>
