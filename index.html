@@ -391,12 +391,17 @@
     window.addEventListener('scroll',()=>{document.getElementById('topBtn').style.display=(window.scrollY>300)?'flex':'none';});
 
     // Form
-    document.getElementById('contact-form').addEventListener('submit',async e=>{
+    document.getElementById('contact-form').addEventListener('submit', async e => {
       e.preventDefault();
-      const form=e.target, data=new FormData(form);
-      const res=await fetch(form.action,{method:'POST',body:data,headers:{'Accept':'application/json'}});
-      if(res.ok){form.reset();document.getElementById('success-message').style.display='block';}
-      else{alert('Try again or text us!');}
+      const form = e.target, data = new FormData(form);
+      try {
+        const res = await fetch(form.action, { method: 'POST', body: data, headers: { 'Accept': 'application/json' }, mode: 'cors' });
+        if (res.ok) { form.reset(); document.getElementById('success-message').style.display = 'block'; }
+        else { alert('Try again or text us!'); }
+      } catch (error) {
+        console.error('Form fetch error:', error);
+        alert('Oops, something went wonky—try texting us instead!');
+      }
     });
   </script>
 </body>
