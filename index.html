@@ -56,6 +56,7 @@
       --input-border: #ccc;
       --text-readable: #444;
     }
+
     body {
       background: var(--bg);
       color: var(--text);
@@ -63,17 +64,21 @@
       line-height: 1.7;
       padding-bottom: 5rem;
     }
+
     @media (max-width: 768px) {
       body, p, li, label, .caption {
         color: #0d0d0d !important;
       }
     }
+
     .container { max-width: 1100px; margin: auto; padding: 2rem 1.5rem; }
+
     h1, h2 {
       color: var(--primary);
       font-weight: 800;
       text-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
+
     h1 {
       font-size: 2.8rem;
       text-align: center;
@@ -83,12 +88,15 @@
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
+
     header p { text-align: center; font-size: 1.3rem; font-weight: 600; color: #333; margin-bottom: 3rem; }
+
     ul {
       list-style: none;
       padding: 0;
       margin: 1.5rem 0;
     }
+
     ul li {
       background: white;
       margin: 0.6rem 0;
@@ -101,8 +109,10 @@
       align-items: center;
       transition: transform 0.2s;
     }
+
     ul li:hover { transform: translateY(-3px); box-shadow: 0 6px 16px rgba(0,0,0,0.12); }
     ul li::before { content: "✓"; color: var(--primary); font-weight: bold; margin-right: .8rem; font-size: 1.3rem; }
+
     /* BEFORE / AFTER GRID */
     .before-after {
       display: grid;
@@ -110,6 +120,7 @@
       gap: 2rem;
       margin: 3rem 0;
     }
+
     .pair {
       background: white;
       padding: 1.5rem;
@@ -117,6 +128,7 @@
       box-shadow: 0 6px 20px rgba(0,0,0,0.1);
       text-align: center;
     }
+
     .pair img {
       width: 100%;
       height: auto;
@@ -124,13 +136,16 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.12);
       transition: transform .3s;
     }
+
     .pair img:hover { transform: scale(1.03); }
+
     .pair .caption {
       margin-top: .8rem;
       font-weight: 600;
       color: var(--text-readable);
       font-size: 1.05rem;
     }
+
     /* EQUIPMENT */
     .equipment {
       text-align: center;
@@ -140,11 +155,13 @@
       border-radius: 20px;
       box-shadow: 0 6px 20px rgba(0,0,0,0.1);
     }
+
     .equipment img {
       max-width: 85%;
       border-radius: 16px;
       box-shadow: 0 8px 24px rgba(0,0,0,0.15);
     }
+
     /* FORM – FIXED: Matches page theme */
     form {
       background: var(--form-bg);
@@ -155,12 +172,14 @@
       box-shadow: 0 4px 15px rgba(0,0,0,0.05);
       margin-top: 2rem;
     }
+
     form label {
       color: var(--form-text);
       font-weight: 600;
       margin-bottom: .5rem;
       display: block;
     }
+
     form input,
     form textarea {
       background: #ffffff;
@@ -172,12 +191,14 @@
       width: 100%;
       margin-bottom: 1rem;
     }
+
     form input:focus,
     form textarea:focus {
       border-color: var(--primary);
       outline: none;
       box-shadow: 0 0 0 3px rgba(0,102,204,0.2);
     }
+
     form button {
       background: linear-gradient(135deg, var(--primary), var(--accent));
       color: white;
@@ -190,10 +211,12 @@
       transition: all .3s;
       width: 100%;
     }
+
     form button:hover {
       transform: translateY(-2px);
       box-shadow: 0 8px 20px rgba(0,102,204,.4);
     }
+
     /* TEXT MESSAGE CTA (mobile) */
     .sms-cta {
       display: none;
@@ -212,10 +235,13 @@
       z-index: 1000;
       animation: pulse 2s infinite;
     }
+
     @keyframes pulse {
       0%,100%{transform:scale(1)}50%{transform:scale(1.02)}
     }
+
     @media (max-width:768px){.sms-cta{display:block}}
+
     /* SCROLL TO TOP – CENTERED */
     #topBtn{
       display:none;
@@ -291,7 +317,7 @@
     <section id="equipment" class="equipment">
       <h2>Professional Equipment</h2>
       <p>We use the best equipment to safely and efficiently get the job done right.</p>
-      <img src="/IMG_2758.jpeg" alt="Grip Management professional soft-wash equipment" loading="lazy">
+      <img src="/IMG_2758.jpeg" alt="Grip Management custom soft-wash trailer" loading="lazy">
     </section>
 
     <!-- BEFORE / AFTER -->
@@ -301,15 +327,15 @@
 
       <div class="before-after">
         <div class="pair">
-          <img src="/IMG_2687.JPG" alt="Before & After – Roof cleaning transformation" loading="lazy">
+          <img src="/IMG_2687.JPG" alt="Before & After – Roof cleaning" loading="lazy">
           <div class="caption">Before → Dirt and Mold buildup | After → Clean and fresh, revealing beautiful original colors</div>
         </div>
         <div class="pair">
-          <img src="/IMG_2871.JPG" alt="Before & After – Driveway cleaning transformation" loading="lazy">
+          <img src="/IMG_2871.JPG" alt="Before & After – Driveway cleaning" loading="lazy">
           <div class="caption">Before → Clay tile due for wash | After → Beautiful and Free of harmful Mold</div>
         </div>
         <div class="pair">
-          <img src="/IMG_2999.JPG" alt="Before & After – Additional cleaning transformation" loading="lazy">
+          <img src="/IMG_2999.JPG" alt="Before & After – Additional cleaning" loading="lazy">
           <div class="caption">Before → “HOA is going to fine me” | After → “I’ll tell the HOA to wash their roof”</div>
         </div>
       </div>
@@ -318,4 +344,60 @@
     <!-- MAP SECTION -->
     <section id="map">
       <h2>Find Us</h2>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3526.123456789!2d-82.4039926!3d27.4774904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3526.123456789!2d-82.4039926!3d27.4774904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c33b9b041a4f83%3A0x901ad0ac68c64a6c!2sGrip%20Management%20LLC!5e0!3m2!1sen!2sus!4v1731260000000" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <section>
+      <h2>Contact Us</h2>
+      <ul>
+        <li>Phone: <a href="tel:+19414048452">(941) 404-8452</a></li>
+        <li>Email: <a href="mailto:john@gripmgmt.com">john@gripmgmt.com</a></li>
+        <li>Location: Lakewood Ranch, FL — Serving Bradenton, Sarasota &amp; Manatee County</li>
+        <li>X: <a href="https://x.com/John_C_Rudolf">Follow us on X</a></li>
+        <li>Google Business: <a href="https://www.google.com/maps/place/Grip+Management+LLC/@27.4774904,-82.4039926,17z/data=!4m18!1m9!3m8!1s0x88c33b9b041a4f83:0x901ad0ac68c64a6c!2sGrip+Management+LLC!8m2!3d27.4774904!4d-82.4039926!9m1!1b1!16s%2Fg%2F11ylmjhlb5!3m7!1s0x88c33b9b041a4f83:0x901ad0ac68c64a6c!8m2!3d27.4774904!4d-82.4039926!9m1!1b1!16s%2Fg%2F11ylmjhlb5?entry=ttu&g_ep=EgoyMDI1MTEwNS4wIKXMDSoASAFQAw%3D%3D">View on Google</a></li>
+      </ul>
+    </section>
+
+    <section id="estimate">
+      <h2>Get a Free Estimate</h2>
+      <form id="contact-form" action="https://formspree.io/f/mrbqpzyj" method="POST">
+        <div class="grid">
+          <label for="name">Name <span style="color:red">*</span>
+            <input type="text" id="name" name="name" required autocomplete="name">
+          </label>
+          <label for="email">Email <span style="color:red">*</span>
+            <input type="email" id="email" name="_replyto" required autocomplete="email">
+          </label>
+        </div>
+        <label for="phone">Phone (optional)
+          <input type="tel" id="phone" name="phone" autocomplete="tel">
+        </label>
+        <label for="message">Message <span style="color:red">*</span>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </label>
+        <button type="submit">Send Request</button>
+        <p id="success-message" style="display:none;color:#00ff00;margin-top:1rem;">
+          Thank you! We’ll reply within 24 hours.
+        </p>
+      </form>
+    </section>
+  </div>
+
+  <!-- SCROLL TO TOP – CENTERED -->
+  <button id="topBtn" onclick="scrollToTop()">Up</button>
+
+  <script>
+    function scrollToTop(){window.scrollTo({top:0,behavior:'smooth'});}
+    window.addEventListener('scroll',()=>{document.getElementById('topBtn').style.display=(window.scrollY>300)?'flex':'none';});
+
+    // Form
+    document.getElementById('contact-form').addEventListener('submit',async e=>{
+      e.preventDefault();
+      const form=e.target, data=new FormData(form);
+      const res=await fetch(form.action,{method:'POST',body:data,headers:{'Accept':'application/json'}});
+      if(res.ok){form.reset();document.getElementById('success-message').style.display='block';}
+      else{alert('Try again or text us!');}
+    });
+  </script>
+</body>
+</html>
